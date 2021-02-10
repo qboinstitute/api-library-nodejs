@@ -26,9 +26,9 @@ export default class Server{
     }
 
     start( callback: Function){        
-        console.log(`PORT: ` + this.port);
-        const puerto = process.env.PORT  || "3000";
-        this.app.listen(puerto, callback());
+        // console.log(`PORT: ` + this.port);
+        // const puerto = process.env.PORT  || "3000";
+        this.app.listen(process.env.PORT, callback());
         this.publicFolder();       
     }
 
