@@ -7,7 +7,8 @@ import MySQL from './mysql/mysql';
 
 // const swaggerUi = require('swagger-ui-express');
 // const swaggerDocument = require('./../swagger.json');
-const server = Server.init(3000);
+const PORT = process.env.PORT  || "3000";
+const server = Server.init(PORT);
 
 // server.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

@@ -5,14 +5,16 @@ import path = require('path');
 export default class Server{
 
     public app: express.Application;
-    public port: number;
+    public port: string;
+    
 
-    constructor(puerto: number){
+    constructor(puerto: string){
+        
         this.port = puerto;
         this.app = express();
     }
 
-    static init (puerto: number){
+    static init (puerto: string){
       
         return new Server(puerto);
     }
