@@ -15,8 +15,9 @@ class Server {
         this.app.use(express.static(publicPath));
     }
     start(callback) {
-        console.log(`PORT: ` + this.port);
-        this.app.listen(this.port, callback());
+        // console.log(`PORT: ` + this.port);
+        // const puerto = process.env.PORT  || "3000";
+        this.app.listen(process.env.PORT, callback());
         this.publicFolder();
     }
 }
