@@ -25,7 +25,9 @@ export default class Server{
         this.app.use(express.static(publicPath));
     }
 
-    start( callback: Function){
+    start( callback: Function){        
+        console.log(`PORT: ` + this.port);
+
         this.app.listen(this.port, callback());
         this.publicFolder();       
     }
